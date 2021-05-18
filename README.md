@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [ci/cd](https://github.com/401-repos/bearer-auth/actions)
-- [back-end server url](https://barer-auth.herokuapp.com/)
+- [ci/cd](https://github.com/401-repos/auth-api/actions)
+- [back-end server url](https://auth-api401.herokuapp.com/)
 
 ### Setup
 
