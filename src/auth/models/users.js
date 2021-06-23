@@ -15,6 +15,7 @@ const users = new mongoose.Schema({
 users.virtual('token').get(function () {
   let tokenObject = {
     username: this.username,
+    capabilities: this.capabilities
   };
   return jwt.sign(tokenObject, process.env.SECRET);
 });
@@ -22,7 +23,7 @@ users.virtual('token').get(function () {
 users.virtual('capabilities').get(function () {
   let acl = {
     user: ['read'],
-    writer:['read', 'create'],
+    writer: ['read', 'create'],
     editor: ['read', 'create', 'update'],
     admin: ['read', 'create', 'update', 'delete'],
   };
