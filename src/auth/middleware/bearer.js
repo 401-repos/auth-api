@@ -15,6 +15,7 @@ module.exports = async (req, res, next) => {
 
     req.user = validUser;
     req.token = validUser.token;
+    req.capabilities = validUser.capabilities;
     next();
 
   } catch (e) {
